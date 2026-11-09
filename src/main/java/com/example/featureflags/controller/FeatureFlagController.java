@@ -46,7 +46,7 @@ public class FeatureFlagController {
     }
     private Flag require(String key) {
         Flag flag = flags.get(key);
-        if (flag == null) throw new ApiException(404, "Feature flag não encontrada")
+        if (flag == null) throw new ApiException(404, "Feature flag não encontrada");
         return flag;
     }
     private void persist(String key, Flag value) throws IOException {
